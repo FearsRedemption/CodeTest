@@ -30,7 +30,7 @@
             <span style="position: absolute; margin-left: 40px; margin-top: 1px;">$</span>
             <input id="annualIncome" name="annualIncome" required type="number" style="padding-left: 8px;">
         </div>
-        <button onclick="validate(document.getElementById('state').value, document.getElementById('householdSize').value, document.getElementById('annualIncome').value)">Submit</button>
+        <button onclick="isEligible(document.getElementById('state').value, document.getElementById('householdSize').value, document.getElementById('annualIncome').value)">Submit</button>
     </form>
     <p id="output">Waiting for Validation</p>
 </body>
