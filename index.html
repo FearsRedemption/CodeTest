@@ -7,31 +7,34 @@
     <script src="index.js" type="text/javascript" ></script>
 </head>
 <body>
-    <form name="myForm">
-        <label for="state">State:</label>
-        <select id="state" name="state" required size="4">
-            <option value="Texas">Texas</option>
-            <option value="RhodeIsland">Rhode Island</option>
-            <option value="Massachusetts">Massachusetts</option>
-        </select>
-        <label for="householdSize">Number of Household Members:</label>
-        <select id="householdSize" name="householdSize" required size="4">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-        </select>
-        <label for="annualIncome">Annual Income:</label>
-        <div>
-            <span style="position: absolute; margin-left: 40px; margin-top: 1px;">$</span>
-            <input id="annualIncome" name="annualIncome" required type="number" style="padding-left: 8px;">
-        </div>
-        <button onclick="isEligible(document.getElementById('state').value, document.getElementById('householdSize').value, document.getElementById('annualIncome').value)">Submit</button>
-    </form>
-    <p id="output">Waiting for Validation</p>
+    <label for="state">State:</label>
+    <select id="state" name="state" required size="4">
+        <option value="Texas">Texas</option>
+        <option value="RhodeIsland">Rhode Island</option>
+        <option value="Massachusetts">Massachusetts</option>
+    </select>
+    <label for="householdSize">Number of Household Members:</label>
+    <select id="householdSize" name="householdSize" required size="4">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </select>
+    <label for="annualIncome">Annual Income:</label>
+    <div>
+        <span style="position: absolute; margin-left: 1px; margin-top: 1px;">$</span>
+        <input id="annualIncome" name="annualIncome" required type="number" style="padding-left: 8px;">
+    </div>
+    <button onclick="getEligibility(
+        document.getElementById('state').value,
+        document.getElementById('householdSize').value,
+        document.getElementById('annualIncome').value
+    )">Submit</button>
+
+    <p id="output"></p>
 </body>
 </html>
