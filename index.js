@@ -3,5 +3,9 @@ const json = "{\"Texas\":[59710,68240,76770,85300,92124,98948,105772,112596],\"R
 
 function validate(state, householdSize, annualIncome) {
     let data = JSON.parse(json);
-    return annualIncome <= data[state][householdSize - 1];
+    if (annualIncome <= data[state][householdSize - 1]) {
+        return "Eligible";
+    } else {
+        return "Ineligible";
+    }
 }
